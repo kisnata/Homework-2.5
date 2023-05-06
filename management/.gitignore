@@ -1,0 +1,41 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/src/main/java/pro/sky/management/controller/EmployeeController.java
+/src/main/java/pro/sky/management/exception/EmployeeAlreadyAddedException.java
+/src/main/java/pro/sky/management/exception/EmployeeNotFoundException.java
+/src/main/java/pro/sky/management/exception/EmployeeStorageIsFullException.java
+/src/main/java/pro/sky/management/model/Employee.java
+/src/main/java/pro/sky/management/service/EmployeeService.java
+/src/main/java/pro/sky/management/Application.java
+/.gitignore
