@@ -25,15 +25,15 @@ public class Employee {
 
     @Override
     public boolean equals(Object o) {
-    if (this == o) {
-    return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-        return false;
-    }
-    Employee employee = (Employee) o;
-    return name.equals(employee.name) && surname.equals(employee.name);
+        if (this == o) {
+            return true;
         }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Employee employee = (Employee) o;
+        return name.equals(employee.name) && surname.equals(employee.name);
+    }
 
     @Override
     public int hashCode() {
@@ -43,6 +43,7 @@ public class Employee {
     @Override
     public String toString() {
         return String.format("ФИ:%s %s", surname, name);
-        }
+    }
 }
+
 

@@ -31,11 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/src/main/java/pro/sky/management/controller/EmployeeController.java
-/src/main/java/pro/sky/management/exception/EmployeeAlreadyAddedException.java
-/src/main/java/pro/sky/management/exception/EmployeeNotFoundException.java
-/src/main/java/pro/sky/management/exception/EmployeeStorageIsFullException.java
-/src/main/java/pro/sky/management/model/Employee.java
-/src/main/java/pro/sky/management/service/EmployeeService.java
-/src/main/java/pro/sky/management/Application.java
-/.gitignore
