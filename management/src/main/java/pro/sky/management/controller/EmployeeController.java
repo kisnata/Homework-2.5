@@ -15,16 +15,16 @@ import pro.sky.management.service.EmployeeService;
             this.employeeService = employeeService;
     }
     @GetMapping("/add")
-    public Employee add(@RequestParam String firstname, @RequestParam String lastName) {
-       return employeeService.add(firstname, lastName);
+    public Employee add(@RequestParam String name, @RequestParam String surname, @RequestParam int department, @RequestParam int salary) {
+       return employeeService.add(name, surname, department, salary);
     }
     @GetMapping("/remove")
-    public Employee remove(@RequestParam String firstname, @RequestParam String lastName) {
-        return employeeService.add(firstname, lastName);
+    public Employee remove(@RequestParam String name, @RequestParam String surname, @RequestParam int department, @RequestParam int salary) {
+        return employeeService.add(name, surname, department, salary);
     }
     @GetMapping("/find")
-    public Employee find(@RequestParam String firstname, @RequestParam String lastName) {
-        return employeeService.add(firstname, lastName);
+    public Employee find(@RequestParam String name, @RequestParam String surname, @RequestParam int department, @RequestParam int salary) {
+        return employeeService.add(name, surname, department, salary);
     }
 }
 

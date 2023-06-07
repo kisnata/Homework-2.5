@@ -6,14 +6,20 @@ import pro.sky.management.exception.EmployeeNotFoundException;
 import pro.sky.management.exception.EmployeeStorageIsFullException;
 import pro.sky.management.model.Employee;
 
+import java.util.Collection;
+
 @Service
 public class EmployeeService {
     private static final int SIZE = 3;
     private final Employee[] employees = new Employee[SIZE];
 
-    public Employee add(String firstName, String lastName) {
+    public static Collection<Object> getAll() {
+        return null;
+    }
+
+    public Employee add(String firstName, String lastName, int department, int salary) {
         int indexForAdding = -1;
-        Employee employee = new Employee(firstName, lastName);
+        Employee employee = new Employee(firstName, lastName, department, salary);
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null && indexForAdding == -1) {
                 indexForAdding = i;
@@ -29,8 +35,8 @@ public class EmployeeService {
         return employees[indexForAdding];
     }
 
-    public Employee find(String firstName, String lastName) {
-        Employee employee = new Employee(firstName, lastName);
+    public Employee find(String name, String surname, int department, int salary) {
+        Employee employee = new Employee(name, surname, department, salary);
         for (Employee emp : employees) {
             if (employee.equals(emp)) {
                 return employee;
@@ -39,13 +45,15 @@ public class EmployeeService {
         throw new EmployeeNotFoundException();
     }
 
-    public Employee remove(String firstName, String lastName) {
-        Employee employee = new Employee(firstName, lastName);
+    public Employee remove(String name, String surname, int department, int salary) {
+        Employee employee = new Employee(name, surname, department, salary);
         for (int i = 0; i < employees.length; i++) {
             employees[i] = null;
             return employee;
         }
         throw new EmployeeNotFoundException();
     }
+
+
 }
 

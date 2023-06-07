@@ -5,22 +5,42 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Objects;
 
 public class Employee {
-    @JsonProperty("firstName")
+    @JsonProperty("Name")
     private final String name;
-    @JsonProperty("lastName")
+    @JsonProperty("Surname")
     private final String surname;
+    private int department;
+    private static int salary;
 
-    public Employee(String firstName, String surname) {
+    public Employee(String firstName, String surname, int department, int salary) {
         this.name = firstName;
         this.surname = surname;
+        this.department = department;
+        this.salary = salary;
     }
 
-    public String getFirstName() {
+    public String getName() {
         return name;
     }
 
-    public String getLastName() {
+    public String getSurname() {
         return surname;
+    }
+
+    public int getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(int department) {
+        this.department = department;
+    }
+
+    public static int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
     @Override
@@ -42,8 +62,9 @@ public class Employee {
 
     @Override
     public String toString() {
-        return String.format("ФИ:%s %s", surname, name);
+        return String.format("ФИ: %s %s, отдел: %d, ЗП: %d", surname, name, department, salary);
     }
+
 }
 
 
