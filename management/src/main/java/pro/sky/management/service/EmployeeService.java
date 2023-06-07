@@ -15,7 +15,6 @@ public class EmployeeService {
     public static Collection<Object> getAll() {
         return null;
     }
-
     public Employee add(String firstName, String lastName, int department, int salary) {
         int indexForAdding = -1;
         Employee employee = new Employee(firstName, lastName, department, salary);

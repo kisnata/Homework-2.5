@@ -17,6 +17,7 @@ import pro.sky.management.service.EmployeeService;
     public Employee add(@RequestParam String name, @RequestParam String surname, @RequestParam int department, @RequestParam int salary) {
        return employeeService.add(name, surname, department, salary);
     }
+
     @GetMapping("/remove")
     public Employee remove(@RequestParam String name, @RequestParam String surname, @RequestParam int department, @RequestParam int salary) {
         return employeeService.add(name, surname, department, salary);
