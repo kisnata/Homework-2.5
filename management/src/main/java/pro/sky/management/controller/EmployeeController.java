@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.sky.management.model.Employee;
 import pro.sky.management.service.EmployeeService;
-
 @RestController
     @RequestMapping("/employee")
     public class EmployeeController {

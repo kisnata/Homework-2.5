@@ -12,7 +12,6 @@ import java.util.Collection;
 public class EmployeeService {
     private static final int SIZE = 3;
     private final Employee[] employees = new Employee[SIZE];
-
     public static Collection<Object> getAll() {
         return null;
     }

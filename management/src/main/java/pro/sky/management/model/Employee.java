@@ -22,19 +22,15 @@ public class Employee {
     public String getName() {
         return name;
     }
-
     public String getSurname() {
         return surname;
     }
-
     public int getDepartment() {
         return department;
     }
-
     public void setDepartment(int department) {
         this.department = department;
     }
-
     public static int getSalary() {
         return salary;
     }
