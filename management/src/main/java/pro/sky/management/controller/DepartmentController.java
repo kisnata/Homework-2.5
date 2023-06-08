@@ -12,7 +12,6 @@ import java.awt.*;
 @RequestMapping("/departmens")
 public class DepartmentController {
     private final DepartmentService departmentService;
-
     public DepartmentController(DepartmentService departmentService) {
         this.departmentService = departmentService;
     }

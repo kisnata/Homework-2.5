@@ -10,8 +10,7 @@ public class Employee {
     @JsonProperty("Surname")
     private final String surname;
     private int department;
-    private static int salary;
-
+    private int salary;
     public Employee(String firstName, String surname, int department, int salary) {
         this.name = firstName;
         this.surname = surname;
@@ -30,12 +29,10 @@ public class Employee {
     public void setDepartment(int department) {
         this.department = department;
     }
-    public static int getSalary() {
-        return salary;
+    public int getSalary() {return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public void setSalary(int salary) {this.salary = salary;
     }
 
     @Override
