@@ -6,12 +6,16 @@ import pro.sky.management.exception.EmployeeNotFoundException;
 import pro.sky.management.exception.EmployeeStorageIsFullException;
 import pro.sky.management.model.Employee;
 
+import java.util.Collection;
+import java.util.List;
+
 @Service
 public class EmployeeService {
     private static final int SIZE = 3;
     private final Employee[] employees = new Employee[SIZE];
-    public void getAll() {
-    }
+
+    public Collection<Employee> getAll() {
+        return List.of(employees);}
 
     public Employee add(String firstName, String lastName, int department, int salary) {
         int indexForAdding = -1;

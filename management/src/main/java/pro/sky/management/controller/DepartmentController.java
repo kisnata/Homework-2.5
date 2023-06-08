@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pro.sky.management.model.Employee;
 import pro.sky.management.service.DepartmentService;
 import java.awt.*;
+import java.util.Collection;
 
 
 @RestController
@@ -29,9 +30,9 @@ public class DepartmentController {
         return departmentService.findEmployeeWithMinSalaryFromDepartment(department);
     }
 
-    @GetMapping(value = "/all", params = "departmentId")
-    public List findEmployeesFromDepartment(@RequestParam("departmentId") int department) {
-        return departmentService.findAllEmployeesFromDepartment(department);
+    @GetMapping(value = "/all", params = "/departmentId")
+    public Collection<Employee> allByDepartment(@RequestParam int departmentId) {
+        return (Collection<Employee>) departmentService.findAllEmployeesFromDepartment(departmentId);
     }
 
     @GetMapping("/all")
@@ -39,4 +40,3 @@ public class DepartmentController {
         return departmentService.findEmployeesByDepartment();
     }
 }
-
