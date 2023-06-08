@@ -16,7 +16,6 @@ public class EmployeeService {
 
     public Collection<Employee> getAll() {
         return List.of(employees);}
-
     public Employee add(String firstName, String lastName, int department, int salary) {
         int indexForAdding = -1;
         Employee employee = new Employee(firstName, lastName, department, salary);
