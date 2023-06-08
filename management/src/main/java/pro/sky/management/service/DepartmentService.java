@@ -69,5 +69,4 @@ public class DepartmentService {
                 .filter(employee -> employee.getDepartment() == department)
                 .collect(Collectors.toList());
     }
-
     }

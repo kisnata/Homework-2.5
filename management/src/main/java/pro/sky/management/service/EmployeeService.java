@@ -13,7 +13,6 @@ import java.util.List;
 public class EmployeeService {
     private static final int SIZE = 3;
     private final Employee[] employees = new Employee[SIZE];
-
     public Collection<Employee> getAll() {
         return List.of(employees);}
     public Employee add(String firstName, String lastName, int department, int salary) {
