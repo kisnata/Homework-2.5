@@ -30,7 +30,6 @@ public class EmployeeService {
         employees[indexForAdding] = employee;
         return employees[indexForAdding];
     }
-
     public Employee find(String name, String surname, int department, int salary) {
         Employee employee = new Employee(name, surname, department, salary);
         for (Employee emp : employees) {
@@ -40,8 +39,6 @@ public class EmployeeService {
         }
         throw new EmployeeNotFoundException();
     }
-
-
     public Employee remove(String name, String surname, int department, int salary) {
         Employee employee = new Employee(name, surname, department, salary);
         for (int i = 0; i < employees.length; i++) {

@@ -8,6 +8,7 @@ import pro.sky.management.model.Employee;
 import pro.sky.management.service.DepartmentService;
 import java.awt.*;
 
+
 @RestController
 @RequestMapping("/departmens")
 public class DepartmentController {
